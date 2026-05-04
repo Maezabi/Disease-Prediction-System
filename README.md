@@ -22,7 +22,7 @@ We predict **Heart Disease** using all risk factors.
 
 ## Results Summary
 - Accuracy: 0.615
-- Mean F1-score (CV): -
+- Mean F1-score (CV): 7591
 
 ## Screenshots of GUI
 
