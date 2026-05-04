@@ -41,4 +41,7 @@ We predict **Heart Disease** using all risk factors.
 
 ## Bonus Implemented
 - Confusion matrix heatmap
+- <img width="600" height="500" alt="confusion_matrix" src="https://github.com/user-attachments/assets/683f5c5f-f2bd-491d-90b2-a3ae221eb992" />
+
 - Feature importance visualization
+- <img width="1000" height="600" alt="feature_importance" src="https://github.com/user-attachments/assets/4fd7b3ed-6bdd-4085-b2d4-e167473dcfc6" />
