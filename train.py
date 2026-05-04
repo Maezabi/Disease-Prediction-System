@@ -69,11 +69,17 @@ model = RandomForestClassifier(n_estimators=200, random_state=42, max_depth=10)
 model.fit(X_train_scaled, y_train_bal)
 joblib.dump(model, 'model.pkl')
 
-# 8-9. Evaluation
+# 8. Evaluation
 y_pred = model.predict(X_test_scaled)
 print("\n✅ Accuracy:", round(model.score(X_test_scaled, y_test), 4))
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
+
+# 9. Cross Validation
+print("\n=== Cross Validation ===")
+skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+cv_scores = cross_val_score(model, X_train_scaled, y_train_bal, cv=skf, scoring='f1_macro')
+print("Stratified K-Fold Mean F1-score:", round(cv_scores.mean(), 4))
 
 # 10. Model Saving
 cm = confusion_matrix(y_test, y_pred)
